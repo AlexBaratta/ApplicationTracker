@@ -1,18 +1,6 @@
 import { useEffect, useState } from 'react';
-import applicationDetails from "../components/applicationDetails"
+import ApplicationDetails from "../components/applicationDetails"
 import "../CSS/Home.css";
-
-const ApplicationDetails = ({ application }) => {
-    return (
-        <div>
-            hello
-            <h4>{application.CompanyName}</h4>
-            <p>{application.AppliedDate}</p>
-            <p>{application.ApplicationStatus}</p>
-        </div>
-    );
-};
-
 
 function Home() {
     const [applications, setApplications] = useState([]);
@@ -29,6 +17,7 @@ function Home() {
 
         fetchApplications();
     }, []); 
+    
     return (
         <div className="application-table">
             <div>

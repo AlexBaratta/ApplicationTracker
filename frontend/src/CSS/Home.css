@@ -1,3 +1,49 @@
-table, tr, td {
-    border: 1px solid black;
-}
+.application-details {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .application-details th,
+  .application-details td {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .application-details th {
+    background-color: #f8f8f8;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .status {
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    text-transform: capitalize;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .status.accepted {
+    background-color: #4CAF50; 
+  }
+  
+  .status.rejected {
+    background-color: #f44336; 
+  }
+  
+  .status.applied {
+    background-color: #2196F3;
+  }
+  
+  .application-details {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+  }
+  
+  .application-details tbody tr:nth-child(odd) {
+    background-color: #fafafa;
+  }
+  

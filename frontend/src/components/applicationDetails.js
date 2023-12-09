@@ -1,11 +1,24 @@
 const applicationDetails = ({ application }) => {
     return (
-        <div className="application-details">
-            <h4>{application.CompanyName}</h4>
-            <p>{application.AppliedDate}</p>
-            <p>{application.ApplicationStatus}</p>
-        </div>
-    )
+        <table className="application-details">
+      <thead>
+        <tr>
+          <th>Company Name</th>
+          <th>Applied Date</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{application.CompanyName}</td>
+          <td>{application.AppliedDate}</td>
+          <td className={`status ${application.ApplicationStatus.replace(/\s+/g, '-').toLowerCase()}`}>
+            {application.ApplicationStatus}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    );
 }
 
 export default applicationDetails;

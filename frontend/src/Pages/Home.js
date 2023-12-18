@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import ApplicationDetails from "../components/applicationDetails"
+import FileUploader from "../components/FileUploader.jsx"
 import "../CSS/Home.css";
 
 function Home() {
@@ -19,6 +20,10 @@ function Home() {
     }, []); 
     
     return (
+        <>
+        <div className='file-uploader'>
+            <FileUploader/>
+        </div>
         <div className="application-table">
             <div>
                 {applications.map((application) => (
@@ -26,6 +31,7 @@ function Home() {
                 ))}
             </div>
         </div>
+        </>
     );
 }
 

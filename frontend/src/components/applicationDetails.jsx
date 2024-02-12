@@ -1,6 +1,6 @@
-const applicationDetails = ({ application }) => {
-    return (
-        <table className="application-details">
+const ApplicationDetails = ({ applications }) => {
+  return (
+    <table className="application-details">
       <thead>
         <tr>
           <th>Company Name</th>
@@ -9,16 +9,18 @@ const applicationDetails = ({ application }) => {
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>{application.CompanyName}</td>
-          <td>{application.AppliedDate}</td>
-          <td className={`status ${application.ApplicationStatus.replace(/\s+/g, '-').toLowerCase()}`}>
-            {application.ApplicationStatus}
-          </td>
-        </tr>
+        {applications.map((application) => (
+          <tr key={application._id}>
+            <td>{application.CompanyName}</td>
+            <td>{application.AppliedDate}</td>
+            <td className={`status ${application.ApplicationStatus.replace(/\s+/g, '-').toLowerCase()}`}>
+              {application.ApplicationStatus}
+            </td>
+          </tr>
+        ))}
       </tbody>
     </table>
-    );
+  );
 }
 
-export default applicationDetails;
+export default ApplicationDetails;

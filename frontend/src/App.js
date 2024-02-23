@@ -1,21 +1,20 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import './CSS/App.css';
-import Home from './Pages/Home';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/Header'; 
+import Home from './Pages/Home'; 
+import NewJobPostings from './components/NewJobPostings.jsx'; 
 
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
-      <div className="pages">
+    <Router>
+      <div>
+        <Header /> 
         <Routes>
-          <Route
-            path="/"
-            element={<Home/>}
-          />
+          <Route path="/" element={<Home />} /> 
+          <Route path="/new-job-postings" element={<NewJobPostings />} /> 
         </Routes>
       </div>
-      </BrowserRouter>
-    </div>
+    </Router>
   );
 }
 

@@ -27,7 +27,6 @@ router.get('/', async (req, res) => {
                 const location = $(tds[2]).text().trim();
                 const datePosted = $(tds[4]).text().trim();
                 const applyLink = $(tds[3]).find('a').attr('href');
-                console.log(applyLink)
                 postings.push({ company, title, location, datePosted, applyLink });
             }
         });

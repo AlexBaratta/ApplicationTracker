@@ -4,6 +4,13 @@ const NewJobPostings = () => {
     const [postings, setPostings] = useState([]);
     const [loading, setLoading] = useState(true);
 
+    const handleApplyClick = (applyLink) => (event) => {
+        event.preventDefault();
+        console.log('Apply link was clicked!');
+        window.open(applyLink, '_blank');
+        //todo: req to add to apply list 
+    };
+
     useEffect(() => {
         const fetchPostings = async () => {
             try {
@@ -38,7 +45,7 @@ const NewJobPostings = () => {
                             <h2>{posting.title} at {posting.company}</h2>
                             <p>Location: {posting.location}</p>
                             <p>Date Posted: {posting.datePosted}</p>
-                            <a href={posting.applyLink} target="_blank" rel="noopener noreferrer">Apply</a>
+                            <a href={posting.applyLink} target="_blank" rel="noopener noreferrer" onClick={handleApplyClick(posting.applyLink)}>Apply</a>
                         </li>
                     ))}
                 </ul>

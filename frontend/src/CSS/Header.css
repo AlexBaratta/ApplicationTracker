@@ -1,0 +1,24 @@
+.app-header {
+    background-color: #282c34;
+    padding: 20px;
+    color: white;
+}
+
+.app-header nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+.app-header button {
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: #61dafb;
+    border: none;
+    color: #282c34;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.app-header button:hover {
+    background-color: #51cbea;
+}

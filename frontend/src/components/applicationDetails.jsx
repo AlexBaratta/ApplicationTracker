@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import "../CSS/ApplicationDetails.css"
 const ApplicationDetails = ({ applications, onUpdate }) => {
   const [editState, setEditState] = useState({}); 
 
@@ -19,7 +19,7 @@ const ApplicationDetails = ({ applications, onUpdate }) => {
 
   return (
     <table className="application-details">
-      <thead>
+    <thead>
         <tr>
           <th>Company Name</th>
           <th>Applied Date</th>

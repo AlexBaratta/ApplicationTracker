@@ -1,0 +1,59 @@
+.application-details {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.application-details th,
+.application-details td {
+    text-align: left;
+    padding: 8px;
+}
+
+.application-details th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.application-details tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.application-details tr:hover {
+    background-color: #ddd;
+}
+
+.application-details td {
+    border-bottom: 1px solid #ddd;
+}
+
+.application-form {
+    margin-top: 20px;
+    padding: 16px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+.application-form input,
+.application-form select {
+    padding: 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.application-form input[type="checkbox"] {
+    margin-top: 12px;
+}
+
+.application-form button {
+    background-color: #4CAF50;
+}
+
+.application-form button:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid #4CAF50;
+}

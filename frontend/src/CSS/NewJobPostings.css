@@ -1,0 +1,25 @@
+.new-job-postings {
+    margin: 20px;
+    padding: 20px;
+}
+
+.new-job-postings h1 {
+    color: #333;
+}
+
+.new-job-postings ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.new-job-postings li {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+}
+
+.new-job-postings a {
+    color: #007bff;
+    text-decoration: none;
+}

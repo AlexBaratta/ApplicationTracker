@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-
+import "../CSS/FileUploader.css"
 function FileUploader() {
     const [selectedFile, setSelectedFile] = useState(null);
 
@@ -36,7 +36,7 @@ function FileUploader() {
     };
 
     return (
-        <div>
+        <div className="file-uploader">
             <input type="file" onChange={handleFileChange} />
             <button onClick={handleUpload} disabled={!selectedFile}>
                 Upload

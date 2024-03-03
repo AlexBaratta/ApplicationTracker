@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-
+import "../CSS/NewJobPostings.css"
 const NewJobPostings = () => {
     const [postings, setPostings] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -36,7 +36,7 @@ const NewJobPostings = () => {
     }
 
     return (
-        <div>
+        <div className="new-job-postings">
             <h1>New Job Postings</h1>
             {postings.length > 0 ? (
                 <ul>
